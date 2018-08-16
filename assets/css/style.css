@@ -1,5 +1,26 @@
-body{
+body
+{
     background-image: url("../images/dragonball1.jpg");
     background-repeat: no-repeat;
     background-size:cover;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.hidden1
+{
+    display: none;
+}
+
+.hidden3
+{
+    padding-left: 20px;
+}
+
+#footer
+{
+    display: none;
 }
