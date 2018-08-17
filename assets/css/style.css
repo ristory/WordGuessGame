@@ -24,3 +24,19 @@ body
 {
     display: none;
 }
+
+.letters
+{
+    color: red;
+}
+
+h2  
+{
+    color: blue;
+}
+
+#guess
+{
+    width: 500px;
+    color: blueviolet;
+}

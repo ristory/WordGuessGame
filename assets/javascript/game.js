@@ -6,6 +6,13 @@
  var randw = worldRandom(randomWorld);
  let numberofGuess = 10;
 
+ 
+
+ function resetfunc()
+ 
+{
+    
+}
  function worldRandom(worldArr) {
     return worldArr[Math.floor(Math.random() * randomWorld.length)];
 }
@@ -16,7 +23,7 @@
 
 function guess()
 {
-
+    numberofGuess--;
     var x = document.querySelector("#guessWorld");
     
     if(!/[^a-z]/i.test(x.value))
@@ -27,6 +34,8 @@ function guess()
         
         x.value = "";
     }
+
+    $("guess").append("<div> ${numberofGuess}</div>");
     
 }
 
@@ -35,7 +44,6 @@ function guess()
  {
      numberofGuess--;
 
-    alert("Hello! I am an alert box!!");    
     document.querySelector(".hidden").style.display = "initial";
     document.querySelector(".hidden1").style.display = "initial";
     document.querySelector(".hidden3").innerHTML = "<h1>You will get a random character</h1>"
@@ -46,6 +54,11 @@ function guess()
     for (let i = 0; i < randw.length; i++) {   
         $("#space").append("<div class='letters' id='letters' + ${i}>_</div>");
       }   
+ }
+
+ function reset()
+ {
+    location.href = "https://ristory.github.io/WordGuessGame/";
  }
 
  
