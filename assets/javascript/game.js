@@ -1,5 +1,8 @@
 
  var randomWorld = ["SonGoku", "Bulma", "Yamcha", "Kuririn", "Chaozu", "Piccolo", "SonGohan", "Vegeta", "Trunks", 	"SonGoten"]
+ var activeWorld = []
+ var space = []
+ var peopleguess = []
  var img = ["db1.jpg", "db2.jpg", "db3.jpg", "db4.jpg"]
  var unique = [];
  var randimg = imgRandom(img);
@@ -28,14 +31,22 @@ function guess()
     
     if(!/[^a-z]/i.test(x.value))
     {
-        x.value = (x.value).toLowerCase();      
+        x.value = (x.value).toLowerCase(); 
+        peopleguess.push(x.value)
+        x.value = "";
+        console.log(peopleguess)    
+        for (let i = 0; i < peopleguess.length; i++) 
+        {
+            
+        }
     }
     else{
         
         x.value = "";
     }
 
-    $("guess").append("<div> ${numberofGuess}</div>");
+
+    
     
 }
 
@@ -52,8 +63,13 @@ function guess()
 
 
     for (let i = 0; i < randw.length; i++) {   
-        $("#space").append("<div class='letters' id='letters' + ${i}>_</div>");
-      }   
+        space.push("_");
+        
+        activeWorld.push(randw.toLowerCase().slice(i,i +1))
+      }     
+    console.log(randw)
+    console.log(space.slice(0, space.length)); 
+    console.log(activeWorld) 
  }
 
  function reset()
