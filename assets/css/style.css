@@ -25,9 +25,54 @@ body
     display: none;
 }
 
-#space
+#space8
 {
     color: red;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+
+#space1
+{
+    color: red;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+#space2
+{
+    color: red;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+#space3
+{
+    color: red;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+#space4
+{
+    color: red;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+#space5
+{
+    color: red;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+#space6
+{
+    color: red;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+#space7
+{
+    color: red;
+    letter-spacing: 10px;
+    font-size: 40px;
 }
 
 h2  
@@ -37,6 +82,6 @@ h2
 
 #guess
 {
-    width: 500px;
+    font-size: 40px;
     color: blueviolet;
 }

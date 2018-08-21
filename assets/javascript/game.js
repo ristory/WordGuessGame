@@ -7,7 +7,7 @@
  var unique = [];
  var randimg = imgRandom(img);
  var randw = worldRandom(randomWorld);
- let numberofGuess = 10;
+ let numberofGuess = 11;
 
  
 
@@ -27,6 +27,11 @@
 function guess()
 {
     numberofGuess--;
+    document.querySelector("#guess").innerHTML = numberofGuess.toString();
+    if(numberofGuess === 0)
+    {
+        reset();
+    }
     var x = document.querySelector("#guessWorld");
     
     if(!/[^a-z]/i.test(x.value))
@@ -35,14 +40,29 @@ function guess()
         peopleguess.push(x.value)
         x.value = "";
         console.log(peopleguess)    
-        for (let i = 0; i < peopleguess.length; i++) 
+        for (let i = 1; i < peopleguess.length +1 ; i++) 
         {
+            activeWorld.forEach(function (element)
+            {
+                if(peopleguess[i - 1] === element)
+                {
+                    document.querySelector("#space" + i).innerHTML = peopleguess[i]
+                }
+            })
             
         }
     }
     else{
         
         x.value = "";
+    }
+
+    for(i = 0 ; i<activeWorld.length; i++)
+    {
+        if(activeWorld[i] === peopleguess[-1])
+        {
+            document.querySelector("#space")
+        }
     }
 
 
@@ -68,7 +88,11 @@ function guess()
         activeWorld.push(randw.toLowerCase().slice(i,i +1))
       }     
     console.log(randw)
-    console.log(space.slice(0, space.length)); 
+    console.log(space.slice(0, space.length));
+    for(i = 1 ; i<space.length + 1; i++)
+    {
+        document.querySelector("#space" + i).innerHTML = "<div id = space" +    i  + ">_</div>"
+    }
     console.log(activeWorld) 
  }
 
